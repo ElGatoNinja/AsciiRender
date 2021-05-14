@@ -1,20 +1,18 @@
-mod engine;
+pub mod engine;
+use engine::entity_components::Pos3D;
 
 fn main() {
-    println!("Hello, world!");
+    engine::core::gameloop();
+    engine::camera::Camera3D::new();
 }
 
 //shape function, create a function that describes a simple 3D body, like an sphere or a torus 
 fn sphere(radious: usize, center: Pos3D) {
 
 }
-//define 3D body position
+
 //define light source position
-struct Pos3D {
-    x:f32,
-    y:f32,
-    z:f32,
-}
+
 
 //normal function, calculate the amount of light reflected by a point
 
